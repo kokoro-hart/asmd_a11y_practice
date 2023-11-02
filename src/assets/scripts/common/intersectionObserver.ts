@@ -54,38 +54,3 @@ export const addClassOnViewportEnter = () => {
     rootMargin: "-40% 0px",
   })
 }
-
-export const followCurrents = () => {
-  const targetSections = document.querySelectorAll(".js-section")
-
-  const activateIndex = (element: Element) => {
-    const currentActiveIndex = document.querySelector<HTMLElement>("#js-drawer-menu [data-current='true']")
-    if (currentActiveIndex !== null) {
-      currentActiveIndex.dataset.current = "false"
-    }
-
-    const newActiveIndex = document.querySelector<HTMLElement>(`.js-drawer-link[href='#${element.id}']`)
-
-    if (!newActiveIndex) return
-    newActiveIndex.dataset.current = "true"
-  }
-
-  const doWhenIntersect = (entries: IntersectionObserverEntry[]) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        activateIndex(entry.target)
-      }
-    }
-  }
-
-  const options = {
-    root: undefined,
-    rootMargin: "-50% 0px",
-    threshold: 0,
-  }
-
-  const observer = new IntersectionObserver(doWhenIntersect, options)
-  for (const section of targetSections) {
-    observer.observe(section)
-  }
-}

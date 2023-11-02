@@ -1,13 +1,10 @@
-import { addClassOnViewportEnter, changeMetaViewport, followCurrents, hamburgerMenu, hashTransition } from "./common"
-import { videoModalWithTab } from "./video"
+import { addClassOnViewportEnter, changeMetaViewport, hamburgerMenu, hashTransition } from "./common"
 
 function App() {
   changeMetaViewport()
   hamburgerMenu()
   addClassOnViewportEnter()
-  videoModalWithTab()
   hashTransition()
-  followCurrents()
 }
 
 export default App()
