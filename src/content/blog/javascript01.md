@@ -1,7 +1,7 @@
 ---
-title: 'Markdown Style Guide'
+title: 'Javascriptの値渡し・参照渡し&ディープコピー・シャローコピーについて調べた'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2023'
+pubDate: 'Jul 08 2022'
 heroImage: '/javascript.webp'
 category: 'JavaScript'
 ---

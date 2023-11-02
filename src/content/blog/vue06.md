@@ -1,5 +1,5 @@
 ---
-title: 'Second post'
+title: 'Vuex4 を Composition API + TypeScript で入門する'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 22 2022'
 heroImage: '/vue.png'

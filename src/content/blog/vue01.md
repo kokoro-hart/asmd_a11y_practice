@@ -1,7 +1,7 @@
 ---
 title: 'Second post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 14 2022'
+description: 'Nuxt2 asyncData を Nuxt3 defineNuxtComponent で書き換え'
+pubDate: 'Jul 22 2022'
 heroImage: '/vue.png'
 category: 'Vue.js'
 ---

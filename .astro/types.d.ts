@@ -175,65 +175,65 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"React copy 2.md": {
-	id: "React copy 2.md";
-  slug: "react-copy-2";
+"React01.md": {
+	id: "React01.md";
+  slug: "react01";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 3.md": {
-	id: "React copy 3.md";
-  slug: "react-copy-3";
+"React02.md": {
+	id: "React02.md";
+  slug: "react02";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 4.md": {
-	id: "React copy 4.md";
-  slug: "react-copy-4";
+"React03.md": {
+	id: "React03.md";
+  slug: "react03";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 5.md": {
-	id: "React copy 5.md";
-  slug: "react-copy-5";
+"React04.md": {
+	id: "React04.md";
+  slug: "react04";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 6.md": {
-	id: "React copy 6.md";
-  slug: "react-copy-6";
+"React05.md": {
+	id: "React05.md";
+  slug: "react05";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 7.md": {
-	id: "React copy 7.md";
-  slug: "react-copy-7";
+"React06.md": {
+	id: "React06.md";
+  slug: "react06";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy 8.md": {
-	id: "React copy 8.md";
-  slug: "react-copy-8";
+"React07.md": {
+	id: "React07.md";
+  slug: "react07";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React copy.md": {
-	id: "React copy.md";
-  slug: "react-copy";
+"React08.md": {
+	id: "React08.md";
+  slug: "react08";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"React.md": {
-	id: "React.md";
-  slug: "react";
+"React09.md": {
+	id: "React09.md";
+  slug: "react09";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -241,20 +241,6 @@ declare module 'astro:content' {
 "htmlcss01.md": {
 	id: "htmlcss01.md";
   slug: "htmlcss01";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"htmlcss02 copy 2.md": {
-	id: "htmlcss02 copy 2.md";
-  slug: "htmlcss02-copy-2";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"htmlcss02 copy.md": {
-	id: "htmlcss02 copy.md";
-  slug: "htmlcss02-copy";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -287,44 +273,16 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"javascript01 copy 2.md": {
-	id: "javascript01 copy 2.md";
-  slug: "javascript01-copy-2";
+"htmlcss06.md": {
+	id: "htmlcss06.md";
+  slug: "htmlcss06";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"javascript01 copy 3.md": {
-	id: "javascript01 copy 3.md";
-  slug: "javascript01-copy-3";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"javascript01 copy 4.md": {
-	id: "javascript01 copy 4.md";
-  slug: "javascript01-copy-4";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"javascript01 copy 5.md": {
-	id: "javascript01 copy 5.md";
-  slug: "javascript01-copy-5";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"javascript01 copy 6.md": {
-	id: "javascript01 copy 6.md";
-  slug: "javascript01-copy-6";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"javascript01 copy.md": {
-	id: "javascript01 copy.md";
-  slug: "javascript01-copy";
+"htmlcss07.md": {
+	id: "htmlcss07.md";
+  slug: "htmlcss07";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -343,72 +301,191 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 2.md": {
-	id: "vue copy 2.md";
-  slug: "vue-copy-2";
+"javascript03.md": {
+	id: "javascript03.md";
+  slug: "javascript03";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 3.md": {
-	id: "vue copy 3.md";
-  slug: "vue-copy-3";
+"javascript04.md": {
+	id: "javascript04.md";
+  slug: "javascript04";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 4.md": {
-	id: "vue copy 4.md";
-  slug: "vue-copy-4";
+"javascript05.md": {
+	id: "javascript05.md";
+  slug: "javascript05";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 5.md": {
-	id: "vue copy 5.md";
-  slug: "vue-copy-5";
+"javascript06.md": {
+	id: "javascript06.md";
+  slug: "javascript06";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 6.md": {
-	id: "vue copy 6.md";
-  slug: "vue-copy-6";
+"javascript07.md": {
+	id: "javascript07.md";
+  slug: "javascript07";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 7.md": {
-	id: "vue copy 7.md";
-  slug: "vue-copy-7";
+"javascript08.md": {
+	id: "javascript08.md";
+  slug: "javascript08";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 8.md": {
-	id: "vue copy 8.md";
-  slug: "vue-copy-8";
+"javascript09.md": {
+	id: "javascript09.md";
+  slug: "javascript09";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy 9.md": {
-	id: "vue copy 9.md";
-  slug: "vue-copy-9";
+"javascript10.md": {
+	id: "javascript10.md";
+  slug: "javascript10";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue copy.md": {
-	id: "vue copy.md";
-  slug: "vue-copy";
+"react01.md": {
+	id: "react01.md";
+  slug: "react01";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vue.md": {
-	id: "vue.md";
-  slug: "vue";
+"react02.md": {
+	id: "react02.md";
+  slug: "react02";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react03.md": {
+	id: "react03.md";
+  slug: "react03";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react04.md": {
+	id: "react04.md";
+  slug: "react04";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react05.md": {
+	id: "react05.md";
+  slug: "react05";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react06.md": {
+	id: "react06.md";
+  slug: "react06";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react07.md": {
+	id: "react07.md";
+  slug: "react07";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react08.md": {
+	id: "react08.md";
+  slug: "react08";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"react09.md": {
+	id: "react09.md";
+  slug: "react09";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue01.md": {
+	id: "vue01.md";
+  slug: "vue01";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue02.md": {
+	id: "vue02.md";
+  slug: "vue02";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue03.md": {
+	id: "vue03.md";
+  slug: "vue03";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue04.md": {
+	id: "vue04.md";
+  slug: "vue04";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue05.md": {
+	id: "vue05.md";
+  slug: "vue05";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue06.md": {
+	id: "vue06.md";
+  slug: "vue06";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue07.md": {
+	id: "vue07.md";
+  slug: "vue07";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue08.md": {
+	id: "vue08.md";
+  slug: "vue08";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue09.md": {
+	id: "vue09.md";
+  slug: "vue09";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vue10.md": {
+	id: "vue10.md";
+  slug: "vue10";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

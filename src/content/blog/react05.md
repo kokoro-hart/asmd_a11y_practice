@@ -1,5 +1,5 @@
 ---
-title: 'Third post'
+title: '【React】多言語対応（i18n）における辞書をLocalazyで管理する '
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 05 2022'
 heroImage: '/react.png'

@@ -1,7 +1,7 @@
 ---
-title: 'Markdown Style Guide'
+title: 'AnimateOnScrollであっさりスクロール演出'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2023'
+pubDate: 'Jul 06 2022'
 heroImage: '/javascript.webp'
 category: 'JavaScript'
 ---

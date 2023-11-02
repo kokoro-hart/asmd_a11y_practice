@@ -26,10 +26,10 @@
   }
 
   &[data-current="true"] {
-    color: var(--color-primary);
+    color: $color_primary;
   }
   @include hover {
-    color: var(--color-primary);
+    color: $color_primary;
   }
 }
 
@@ -39,6 +39,6 @@
   left: 0;
   height: 3px;
   pointer-events: none;
-  background-color: var(--color-primary);
+  background-color: $color_primary;
   transition: width 0.6s $ease_out_quint, transform 0.6s $ease_out_quint;
 }

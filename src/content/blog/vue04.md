@@ -1,7 +1,7 @@
 ---
-title: 'Second post'
+title: 'Nuxt 3 を今すぐオススメしたい 15 のポイント'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 22 2022'
+pubDate: 'May 22 2022'
 heroImage: '/vue.png'
 category: 'Vue.js'
 ---

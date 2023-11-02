@@ -1,5 +1,5 @@
 ---
-title: 'Markdown Style Guide'
+title: 'あるhtml要素からJavaScriptのイベントを全て削除したい'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jul 5 2022'
 heroImage: '/javascript.webp'

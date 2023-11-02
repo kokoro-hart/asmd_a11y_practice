@@ -1,7 +1,7 @@
 ---
-title: 'Markdown Style Guide'
+title: 'Electronでパス取得にハマった話'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 08 2022'
+pubDate: 'Jul 01 2023'
 heroImage: '/javascript.webp'
 category: 'JavaScript'
 ---

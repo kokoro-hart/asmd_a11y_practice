@@ -95,7 +95,7 @@
 .card__title {
   @include lh(24, 16);
   @include font_secondary;
-  @include line_clamp(3);
+  @include line_clamp(2);
   @include clamp_mix("font-size", 392, 767, 16, 24);
 
   @include mq(md, max) {
@@ -120,6 +120,7 @@
   @include lh(18.29, 15);
   @include font_secondary;
   @include line_clamp(1);
+  color: $color_gray;
 
   letter-spacing: 0.75px;
   word-break: break-word;

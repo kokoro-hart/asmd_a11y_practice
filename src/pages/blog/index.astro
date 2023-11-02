@@ -13,10 +13,12 @@ const meta = {
 ---
 
 <AppLayout meta={meta}>
-  <Container>
+  <Container size={"md"} className={"py-[60px]"}>
     <section>
       <Heading className={"justify-center"}>記事一覧</Heading>
-      <CardsWithPaginationFilter cards={posts} categories={categories} />
+      <div class="mt-[45px]">
+        <CardsWithPaginationFilter cards={posts} categories={categories} />
+      </div>
     </section>
   </Container>
 </AppLayout>

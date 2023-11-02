@@ -1,7 +1,7 @@
 ---
-title: 'Third post'
+title: 'React の state を key でリセットする'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 03 2022'
+pubDate: 'Jul 06 2022'
 heroImage: '/react.png'
 category: 'React'
 ---

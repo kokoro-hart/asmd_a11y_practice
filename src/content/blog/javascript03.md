@@ -1,5 +1,5 @@
 ---
-title: 'よく使うTypeScriptローカル環境構築手順'
+title: '入力フォームにリアルタイムハイライト機能を自前実装した話'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jul 08 2022'
 heroImage: '/javascript.webp'

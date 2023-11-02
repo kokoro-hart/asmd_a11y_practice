@@ -1,7 +1,7 @@
 ---
-title: 'Third post'
+title: 'useEffectのウォーターフォール問題に気をつけよう'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 09 2022'
+pubDate: 'May 03 2022'
 heroImage: '/react.png'
 category: 'React'
 ---

@@ -1,7 +1,7 @@
 ---
-title: 'Third post'
+title: 'OrvalでReact-QueryのHooksを生成する'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 04 2022'
+pubDate: 'Jul 10 2022'
 heroImage: '/react.png'
 category: 'React'
 ---

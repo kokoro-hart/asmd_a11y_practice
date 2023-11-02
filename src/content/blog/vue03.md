@@ -1,5 +1,5 @@
 ---
-title: 'Second post'
+title: '植物図鑑アプリをLaravel × Vue.js のSPAで作ってみた'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 22 2023'
 heroImage: '/vue.png'

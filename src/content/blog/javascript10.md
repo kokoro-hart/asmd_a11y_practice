@@ -1,7 +1,7 @@
 ---
-title: 'よく使うTypeScriptローカル環境構築手順'
+title: 'JavaScriptの非同期処理をじっくり理解する (3) async/await'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 08 2022'
+pubDate: 'Jul 02 2022'
 heroImage: '/javascript.webp'
 category: 'JavaScript'
 ---

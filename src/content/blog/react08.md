@@ -1,7 +1,7 @@
 ---
-title: 'Third post'
+title: 'styled-components内で他のコンポーネントを入れ子指定する'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 07 2022'
+pubDate: 'Jul 08 2022'
 heroImage: '/react.png'
 category: 'React'
 ---

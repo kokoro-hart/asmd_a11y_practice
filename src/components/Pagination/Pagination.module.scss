@@ -9,7 +9,7 @@
 .pagination__inner {
   display: flex;
   gap: 23px;
-  align-items: center;
+  align-items: baseline;
 }
 
 .pagination__next,
@@ -30,7 +30,7 @@
   @include hover {
     svg {
       path {
-        fill: var(--color-primary);
+        fill: $color_primary;
       }
     }
   }
@@ -56,12 +56,12 @@
 
   :global(.pageNumber) {
     &[data-current="true"] {
-      color: var(--color-primary);
+      color: $color_primary;
       transition: color 0.6s $ease_out_quint;
     }
 
     @include hover {
-      color: var(--color-primary);
+      color: $color_primary;
     }
   }
 

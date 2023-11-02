@@ -1,4 +1,6 @@
 ---
+import IconArrowLeft from "@/assets/images/icons/IconArrowLeft.astro"
+import IconArrowRight from "@/assets/images/icons/IconArrowRight.astro"
 import styles from "./Pagination.module.scss"
 
 const { class: className } = Astro.props
@@ -11,11 +13,11 @@ const { class: className } = Astro.props
       class:list={[styles.pagination__prev, "js-paginationPrev"]}
       aria-label={"Back to previous page"}
     >
-      ＜
+      <IconArrowLeft />
     </button>
     <div class:list={[styles.pagination__counter, "js-paginationCounter"]}></div>
     <button type="button" class:list={[styles.pagination__next, "js-paginationNext"]} aria-label={"Go to next page"}>
-      ＞
+      <IconArrowRight />
     </button>
   </div>
 </div>

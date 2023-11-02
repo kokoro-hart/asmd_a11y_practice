@@ -1,5 +1,5 @@
 ---
-title: 'Markdown Style Guide'
+title: 'JavaScriptでLLMを弄ってみる【transformers.js】'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jul 06 2022'
 heroImage: '/javascript.webp'

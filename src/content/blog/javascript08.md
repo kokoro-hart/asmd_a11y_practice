@@ -1,7 +1,7 @@
 ---
-title: 'Markdown Style Guide'
+title: 'Mapbox Newsletter WEEKLY TIPSの解説 -「expressionを使用してグラデーションラインを作成」'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 06 2022'
+pubDate: 'Jul 01 2022'
 heroImage: '/javascript.webp'
 category: 'JavaScript'
 ---
