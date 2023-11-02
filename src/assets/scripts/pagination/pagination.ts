@@ -193,6 +193,7 @@ export class Pagination {
       countList.dataset.counterId = String(i)
       countList.classList.add("pageNumber")
       countList.textContent = String(i)
+      countList.setAttribute("aria-label", `ページ${i.toString()}`)
       this.pageCounterWrap.append(countList)
     }
 
