@@ -14,7 +14,14 @@ const { className } = Astro.props
 <div class:list={[styles.profile, className]}>
   <div class={styles.inner}>
     <div class={styles.image_wrap}>
-      <img src="/cat.webp" alt="可愛らしい白い猫がこちらを見上げている" loading="lazy" decoding="async" width={640} height={635} />
+      <img
+        src="/cat.webp"
+        alt="可愛らしい白い猫がこちらを見上げている"
+        loading="lazy"
+        decoding="async"
+        width={640}
+        height={635}
+      />
     </div>
     <div class={styles.content}>
       <h3 class={styles.heading}>山田 太郎</h3>

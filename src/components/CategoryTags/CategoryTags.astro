@@ -11,7 +11,7 @@ const { categories } = Astro.props
 ---
 
 <div class:list={[styles.categoryTags, "js-slide-line-spot"]}>
-  <ul class={styles.categoryTags__list}>
+  <ul class={styles.categoryTags__list} aria-label="記事のカテゴリ選択">
     <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
       <button
         type="button"

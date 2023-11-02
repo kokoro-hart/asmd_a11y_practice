@@ -145,12 +145,13 @@ class PaginationWithFilter extends Pagination {
 
     const pageNumbers = document.querySelectorAll<HTMLElement>(".pageNumber")
 
-    for (const element of pageNumbers) {
-      element.addEventListener("click", () => {
-        this.currentPager = Number(element.dataset.counterId)
+    for (const pageNumber of pageNumbers) {
+      pageNumber.addEventListener("click", () => {
+        this.currentPager = Number(pageNumber.dataset.counterId)
         this.updatePageState(this.currentPager)
         // asmd_section
-        // インタラクティブな要素はフォーカスの制御も検討しよう！
+        // インタラクティブな要素は
+        // ユーザーがアクションした時、「次に読み上げられるコンテンツが適切か」を意識しよう
         setFocusableNode(this.articlesWrap)
       })
     }

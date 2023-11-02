@@ -14,8 +14,6 @@ type Props = CardProps
 
 const { id, title, thumbnail, date, category } = Astro.props
 
-const formattedDate = dayjs(date).format("YYYY-MM-DD")
-
 // asmd_section
 // 日付表記の読み上げ
 // 2023-12-01 🙆‍♂️
@@ -39,7 +37,7 @@ const formattedDate = dayjs(date).format("YYYY-MM-DD")
     </div>
     <div class={styles.card__body}>
       <h3 class={styles.card__title} set:html={title} />
-      <time class={styles.card__area} datetime={date} aria-label={formattedDate}>
+      <time class={styles.card__area} datetime={date}>
         {date}
       </time>
     </div>
