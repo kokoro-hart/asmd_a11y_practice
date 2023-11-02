@@ -175,69 +175,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"React01.md": {
-	id: "React01.md";
-  slug: "react01";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React02.md": {
-	id: "React02.md";
-  slug: "react02";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React03.md": {
-	id: "React03.md";
-  slug: "react03";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React04.md": {
-	id: "React04.md";
-  slug: "react04";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React05.md": {
-	id: "React05.md";
-  slug: "react05";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React06.md": {
-	id: "React06.md";
-  slug: "react06";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React07.md": {
-	id: "React07.md";
-  slug: "react07";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React08.md": {
-	id: "React08.md";
-  slug: "react08";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"React09.md": {
-	id: "React09.md";
-  slug: "react09";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "htmlcss01.md": {
 	id: "htmlcss01.md";
   slug: "htmlcss01";

@@ -6,10 +6,12 @@ type Props = {
 }
 
 const { categories } = Astro.props
+// asmd_section
+// 説明が不足している箇所にも隠しテキストを置いてあげよう！
 ---
 
 <div class:list={[styles.categoryTags, "js-slide-line-spot"]}>
-  <ul class={styles.categoryTags__list} aria-label="記事カテゴリ選択">
+  <ul class={styles.categoryTags__list}>
     <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
       <button
         type="button"
@@ -18,7 +20,8 @@ const { categories } = Astro.props
         data-current={"true"}
         data-next-current={"true"}
       >
-        All
+        <span aria-hidden="true">All</span>
+        <span class="sr-only">全ての記事一覧を見る</span>
       </button>
     </li>
     {
@@ -32,6 +35,7 @@ const { categories } = Astro.props
             data-next-current={"false"}
           >
             {category}
+            <span class="sr-only">の記事一覧を見る</span>
           </button>
         </li>
       ))

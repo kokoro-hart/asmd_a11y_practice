@@ -1,3 +1,5 @@
+import { setFocusableNode } from "../utility"
+
 import { Pagination } from "./pagination"
 
 import { INITIAL_CATEGORY } from "@/consts"
@@ -147,7 +149,9 @@ class PaginationWithFilter extends Pagination {
       element.addEventListener("click", () => {
         this.currentPager = Number(element.dataset.counterId)
         this.updatePageState(this.currentPager)
-        // setFocusableNode(this.articlesWrap)
+        // asmd_section
+        // インタラクティブな要素はフォーカスの制御も検討しよう！
+        setFocusableNode(this.articlesWrap)
       })
     }
   }
