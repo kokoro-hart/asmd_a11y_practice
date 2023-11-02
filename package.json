@@ -17,14 +17,14 @@
     "validate": "npm run check-types && lint-staged --no-stash"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^1.2.2",
-    "astro": "^2.10.15",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^3.4.2",
     "micromodal": "^0.4.10",
     "ress": "^4.0.0",
     "swiper": "^8.3.2"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.2",
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@markuplint/astro-parser": "^3.6.3",
@@ -33,7 +33,7 @@
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
-    "astro-compress": "^2.0.4",
+    "astro-compress": "^2.2.2",
     "dayjs": "^1.11.10",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",

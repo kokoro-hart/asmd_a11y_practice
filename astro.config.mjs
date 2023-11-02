@@ -23,9 +23,6 @@ export const CONSTANTS = {
  */
 export default defineConfig({
   site: "https://wd-flat.com/",
-  experimental: {
-    assets: true
-  },
   integrations: [
     compress({
       path: ["./dist"],
