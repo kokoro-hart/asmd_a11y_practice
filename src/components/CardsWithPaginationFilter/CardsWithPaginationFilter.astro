@@ -15,15 +15,15 @@ type Props = {
 const { cards, categories, perPage = 6 } = Astro.props
 ---
 
-<div id="js-paginationWithFilter" class={styles.cardsWithPaginationFilter} data-per-page={perPage}>
+<div id="js-paginationWithFilter" class={styles.wrapper} data-per-page={perPage}>
   <CategoryTags categories={categories} />
-  <div id="js-articlesWrap" class:list={[styles.cardsWithPaginationFilter__cards, "mt-[42px]"]}>
+  <div id="js-articlesWrap" class:list={[styles.cards, "mt-[42px] mb-[32px]"]}>
     {cards.map((card) => <Card {...card} />)}
-    <div class={styles.cardsWithPaginationFilter__skeletonCards}>
-      {Array.from({ length: perPage }).map((_) => <div class:list={[styles.skeletonCard, "js-skeletonCard"]} />)}
+    <div class={styles.skeletons}>
+      {Array.from({ length: perPage }).map((_) => <div class:list={[styles.skeleton, "js-skeletonCard"]} />)}
     </div>
   </div>
-  <Pagination className={"max-md:mt-[18px]"} />
+  <Pagination />
 </div>
 
 <script>

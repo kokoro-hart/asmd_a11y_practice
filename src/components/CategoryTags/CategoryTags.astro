@@ -10,13 +10,13 @@ const { categories } = Astro.props
 // 説明が不足している箇所にも隠しテキストを置いてあげよう！
 ---
 
-<div class:list={[styles.categoryTags, "js-slide-line-spot"]}>
-  <ul class={styles.categoryTags__list} aria-label="記事のカテゴリ選択">
-    <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
+<div class:list={[styles.wrapper, "js-slide-line-spot"]}>
+  <ul class={styles.list} aria-label="記事のカテゴリ選択">
+    <li class:list={[styles.item, "js-nav-slide-item"]}>
       <button
         type="button"
         data-filter={"all"}
-        class:list={[styles.categoryTags__tag, "js-filterTrigger"]}
+        class:list={[styles.button, "js-filterTrigger"]}
         data-current={"true"}
         data-next-current={"true"}
       >
@@ -26,11 +26,11 @@ const { categories } = Astro.props
     </li>
     {
       categories.map((category) => (
-        <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
+        <li class:list={[styles.item, "js-nav-slide-item"]}>
           <button
             type="button"
             data-filter={category}
-            class:list={[styles.categoryTags__tag, "js-filterTrigger"]}
+            class:list={[styles.button, "js-filterTrigger"]}
             data-current={"false"}
             data-next-current={"false"}
           >
@@ -41,7 +41,7 @@ const { categories } = Astro.props
       ))
     }
   </ul>
-  <span class:list={[styles.categoryTags__slideLine, "js-nav-slide-line"]}></span>
+  <span class:list={[styles.slideLine, "js-nav-slide-line"]}></span>
 </div>
 
 <script>

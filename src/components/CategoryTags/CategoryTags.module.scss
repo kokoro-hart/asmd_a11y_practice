@@ -1,18 +1,18 @@
 @charset "utf-8";
 @use "@/assets/styles/global" as *;
 
-.categoryTags {
+.wrapper {
   position: relative;
 }
 
-.categoryTags__list {
+.list {
   display: flex;
   align-items: center;
   padding: 2px 0;
   margin-left: -13px;
 }
 
-.categoryTags__tag[type="button"] {
+.button[type="button"] {
   display: block;
   padding: 13px 17px;
   color: $color_gray;
@@ -33,7 +33,7 @@
   }
 }
 
-.categoryTags__slideLine {
+.slideLine {
   position: absolute;
   bottom: 11px;
   left: 0;

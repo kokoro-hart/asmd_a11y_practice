@@ -20,24 +20,24 @@
   }
 
   @include hover {
-    .card__thumbnail {
+    .thumbnail {
       transform: translate(-50%, -50%) scale(1.03);
     }
 
-    .card__icon {
+    .icon {
       transform: translateX(3px) translateY(-50%);
     }
   }
 }
 
-.card__link {
+.link {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
-.card__thumbnailWrap {
+.thumbnail_wrap {
   position: relative;
   z-index: 1;
   display: block;
@@ -57,7 +57,7 @@
   }
 }
 
-.card__thumbnail {
+.thumbnail {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,7 +69,7 @@
   object-position: center center;
 }
 
-.card__body {
+.body {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -92,7 +92,7 @@
   }
 }
 
-.card__title {
+.title {
   @include lh(24, 16);
   @include font_secondary;
   @include line_clamp(2);
@@ -111,7 +111,7 @@
   }
 }
 
-.card__area {
+.date {
   position: absolute;
   bottom: 12px;
   left: 12px;
@@ -140,7 +140,7 @@
   }
 }
 
-.card__icon {
+.icon {
   position: absolute;
   top: 50%;
   right: 11px;

@@ -1,19 +1,19 @@
 @charset "utf-8";
 @use "@/assets/styles/global" as *;
 
-.pagination {
+.wrapper {
   display: flex;
   justify-content: center;
 }
 
-.pagination__inner {
+.inner {
   display: flex;
   gap: 23px;
   align-items: baseline;
 }
 
-.pagination__next,
-.pagination__prev {
+.next,
+.prev {
   padding: 10px;
   visibility: visible;
 
@@ -36,7 +36,7 @@
   }
 }
 
-.pagination__counter {
+.counter {
   display: flex;
   gap: 23px;
   align-items: center;

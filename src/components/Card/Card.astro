@@ -14,6 +14,8 @@ type Props = CardProps
 
 const { id, title, thumbnail, date, category } = Astro.props
 
+const formattedDate = dayjs(date).format("YYYY-MM-DD")
+
 // asmd_section
 // 日付表記の読み上げ
 // 2023-12-01 🙆‍♂️
@@ -23,10 +25,10 @@ const { id, title, thumbnail, date, category } = Astro.props
 ---
 
 <article class:list={[styles.card, "js-articleItem"]} data-category={category}>
-  <a href={id} class={styles.card__link}>
-    <div class={styles.card__thumbnailWrap}>
+  <a href={id} class={styles.link}>
+    <div class={styles.thumbnail_wrap}>
       <img
-        class={styles.card__thumbnail}
+        class={styles.thumbnail}
         src={thumbnail}
         loading="lazy"
         decoding="async"
@@ -35,9 +37,9 @@ const { id, title, thumbnail, date, category } = Astro.props
         alt={`${category}のロゴ`}
       />
     </div>
-    <div class={styles.card__body}>
-      <h3 class={styles.card__title} set:html={title} />
-      <time class={styles.card__area} datetime={date}>
+    <div class={styles.body}>
+      <h3 class={styles.title} set:html={title} />
+      <time class={styles.date} datetime={date} aria-label={formattedDate}>
         {date}
       </time>
     </div>
