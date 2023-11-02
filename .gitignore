@@ -1,0 +1,32 @@
+# Build output
+dist/
+.output/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache
+.eslintcache
+
+# Environment variables
+.env
+.env*.local
+.env*.production
+
+# misc
+*.pem
+.DS_Store
+Thumbs.db
+
+# JetBrains IDE
+.idea/
+*.iml
+
+# vscode
+.vscode/

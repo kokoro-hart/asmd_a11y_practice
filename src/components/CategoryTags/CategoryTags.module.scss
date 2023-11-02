@@ -1,0 +1,44 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.categoryTags {
+  position: relative;
+}
+
+.categoryTags__list {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+  margin-left: -13px;
+}
+
+.categoryTags__tag[type="button"] {
+  display: block;
+  padding: 13px 17px;
+  color: $color_gray;
+  transition: color 0.6s $ease_out_quint;
+  @include font_secondary;
+
+  @include mq(md) {
+    letter-spacing: 0, 05em;
+    white-space: nowrap;
+    @include clamp_mix("font-size", 768, 1280, 16, 22);
+  }
+
+  &[data-current="true"] {
+    color: var(--color-primary);
+  }
+  @include hover {
+    color: var(--color-primary);
+  }
+}
+
+.categoryTags__slideLine {
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  height: 3px;
+  pointer-events: none;
+  background-color: var(--color-primary);
+  transition: width 0.6s $ease_out_quint, transform 0.6s $ease_out_quint;
+}

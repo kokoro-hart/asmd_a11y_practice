@@ -1,0 +1,46 @@
+---
+import styles from "./CategoryTags.module.scss"
+
+type Props = {
+  categories: string[]
+}
+
+const { categories } = Astro.props
+---
+
+<div class:list={[styles.categoryTags, "js-slide-line-spot"]}>
+  <ul class={styles.categoryTags__list} aria-label="記事カテゴリ選択">
+    <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
+      <button
+        type="button"
+        data-filter={"all"}
+        class:list={[styles.categoryTags__tag, "js-filterTrigger"]}
+        data-current={"true"}
+        data-next-current={"true"}
+      >
+        All
+      </button>
+    </li>
+    {
+      categories.map((category) => (
+        <li class:list={[styles.categoryTags__item, "js-nav-slide-item"]}>
+          <button
+            type="button"
+            data-filter={category}
+            class:list={[styles.categoryTags__tag, "js-filterTrigger"]}
+            data-current={"false"}
+            data-next-current={"false"}
+          >
+            {category}
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+  <span class:list={[styles.categoryTags__slideLine, "js-nav-slide-line"]}></span>
+</div>
+
+<script>
+  import { slideLineControl } from "@/assets/scripts/slideLine"
+  slideLineControl(".js-slide-line-spot")
+</script>

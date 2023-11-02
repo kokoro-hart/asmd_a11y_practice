@@ -1,0 +1,26 @@
+@charset "utf-8";
+@use "variables";
+
+@mixin mq($size, $width: min) {
+  $result: 0;
+
+  @if (type-of($size) == number) {
+    $result: $size;
+  } @else {
+    @each $key, $value in variables.$breakpoints {
+      @if ($key == $size) {
+        $result: $value;
+      }
+    }
+  }
+
+  @if ($width == max) {
+    @media not all and (min-width: #{$result}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$result}) {
+      @content;
+    }
+  }
+}

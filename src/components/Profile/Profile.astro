@@ -1,0 +1,33 @@
+---
+import styles from "./Profile.module.scss"
+import IconTwitter from "@/assets/images/icons/IconTwitter.astro"
+import IconGIthub from "@/assets/images/icons/IconGIthub.astro"
+
+import type { PropsWithClassName } from "@/types"
+
+type Props = PropsWithClassName
+
+const { className } = Astro.props
+---
+
+<div class:list={[styles.profile, className]}>
+  <div class={styles.inner}>
+    <div class={styles.image_wrap}>
+      <img src="/cat.webp" alt="" loading="lazy" decoding="async" width={640} height={635} />
+    </div>
+    <div class={styles.content}>
+      <h3 class={styles.heading}>山田 太郎</h3>
+      <p class={styles.desc}>デザイナー・エンジニア</p>
+      <div class={styles.social_Links}>
+        <a href="https://twitter.com/astrodotbuild" target="_blank">
+          <span class="sr-only">Twitter</span>
+          <IconTwitter />
+        </a>
+        <a href="https://github.com/withastro/astro" target="_blank">
+          <span class="sr-only">GitHub</span>
+          <IconGIthub />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+---
+import styles from "./Pagination.module.scss"
+
+const { class: className } = Astro.props
+---
+
+<div class:list={[styles.pagination, className]}>
+  <div class={styles.pagination__inner}>
+    <button
+      type="button"
+      class:list={[styles.pagination__prev, "js-paginationPrev"]}
+      aria-label={"Back to previous page"}
+    >
+      ＜
+    </button>
+    <div class:list={[styles.pagination__counter, "js-paginationCounter"]}></div>
+    <button type="button" class:list={[styles.pagination__next, "js-paginationNext"]} aria-label={"Go to next page"}>
+      ＞
+    </button>
+  </div>
+</div>

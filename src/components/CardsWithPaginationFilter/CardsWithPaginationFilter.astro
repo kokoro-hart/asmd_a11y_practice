@@ -1,0 +1,34 @@
+---
+import Container from "@/layouts/Container/Container.astro"
+import type { CardProps } from "../Card/Card.astro"
+import Card from "../Card/Card.astro"
+import CategoryTags from "../CategoryTags/CategoryTags.astro"
+import Pagination from "../Pagination/Pagination.astro"
+
+import styles from "./CardsWithPaginationFilter.module.scss"
+
+type Props = {
+  categories: string[]
+  cards: CardProps[]
+  perPage?: number
+}
+
+const { cards, categories, perPage = 6 } = Astro.props
+---
+
+<div id="js-paginationWithFilter" class={styles.cardsWithPaginationFilter} data-per-page={perPage}>
+  <CategoryTags categories={categories} />
+  <div id="js-articlesWrap" class:list={[styles.cardsWithPaginationFilter__cards, "mt-[42px]"]}>
+    {cards.map((card) => <Card {...card} />)}
+    <div class={styles.cardsWithPaginationFilter__skeletonCards}>
+      {Array.from({ length: perPage }).map((_) => <div class:list={[styles.skeletonCard, "js-skeletonCard"]} />)}
+    </div>
+  </div>
+  <Pagination className={"max-md:mt-[18px]"} />
+</div>
+
+<script>
+  import { paginationWithFilter } from "@/assets/scripts/pagination"
+
+  paginationWithFilter()
+</script>

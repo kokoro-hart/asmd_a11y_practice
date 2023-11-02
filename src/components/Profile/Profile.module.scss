@@ -1,0 +1,45 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.profile {
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.image_wrap {
+  overflow: hidden;
+  aspect-ratio: 640 / 635;
+  border-radius: 50%;
+  width: 140px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.heading {
+  @include fz(24);
+}
+
+.desc {
+  margin-top: 16px;
+  @include fz(16);
+}
+
+.social_Links {
+  display: flex;
+  margin-left: -10px;
+
+  & > a {
+    display: block;
+    padding: 10px;
+    @include hover_opacity;
+  }
+}

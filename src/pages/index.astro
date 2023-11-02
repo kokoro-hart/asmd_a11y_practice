@@ -1,0 +1,30 @@
+---
+import CardsWithPaginationFilter from "@/components/CardsWithPaginationFilter/CardsWithPaginationFilter.astro"
+import AppLayout from "@/layouts/AppLayout/AppLayout.astro"
+import Container from "@/layouts/Container/Container.astro"
+import Profile from "@/components/Profile/Profile.astro"
+
+import { usePosts } from "@/hooks"
+
+const { posts, categories } = await usePosts()
+
+const meta = {
+  description: "description",
+}
+---
+
+<AppLayout meta={meta}>
+  <section class={"bg-white"}>
+    <h2 class="sr-only">プロフィール</h2>
+    <Container size={"md"}>
+      <Profile className={"py-[60px]"} />
+    </Container>
+  </section>
+
+  <Container size={"md"}>
+    <section class={"mt-[42px]"}>
+      <h2 class="sr-only">記事一覧</h2>
+      <CardsWithPaginationFilter cards={posts} categories={categories} />
+    </section>
+  </Container>
+</AppLayout>

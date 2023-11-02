@@ -1,0 +1,51 @@
+@charset "utf-8";
+@use "sass:math";
+
+@mixin font_primary {
+  font-family: Montserrat, sans-serif;
+
+  @include font_weight_regular;
+}
+
+@mixin font_secondary {
+  font-family: "Noto Sans JP", sans-serif;
+
+  @include font_weight_bold;
+}
+
+@mixin fz($size, $base: 16) {
+  font-size: $size + px;
+  font-size: math.div($size, $base) + rem;
+}
+
+@mixin font_weight_light {
+  font-weight: 300;
+}
+
+@mixin font_weight_regular {
+  font-weight: 400;
+}
+
+@mixin font_weight_medium {
+  font-weight: 500;
+}
+
+@mixin font_weight_semiBold {
+  font-weight: 600;
+}
+
+@mixin font_weight_bold {
+  font-weight: 700;
+}
+
+@mixin lh($line, $fz) {
+  line-height: math.div($line, $fz);
+}
+
+@mixin fzVariableSP($fz, $times: 1.5, $deviceWidth: 375) {
+  font-size: min(calc(#{$fz}px * #{$times}), calc(#{$fz} / #{$deviceWidth}) * 100vw);
+}
+
+@mixin fzVariablePC($fz, $times: 1.4, $deviceWidth: 1280) {
+  font-size: min(#{$fz}px, calc(#{$fz} / #{$deviceWidth}) * 100vw * #{$times});
+}

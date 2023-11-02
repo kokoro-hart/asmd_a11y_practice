@@ -1,0 +1,45 @@
+---
+import styles from "./Card.module.scss"
+import dayjs from "dayjs"
+
+export type CardProps = {
+  id: string
+  title: string
+  thumbnail: string
+  date: string
+  category: string
+}
+
+type Props = CardProps
+
+const { id, title, thumbnail, date, category } = Astro.props
+const foramatedDate = dayjs(date).format("YYYY-MM-DD")
+
+// 日付表記の読み上げ
+// 2023-12-01 🙆‍♂️
+// 2023.12.01 🙆‍♂️
+// 2023年12月01日 🙆‍♂️
+// 2023/12/01 ❌
+---
+
+<article class:list={[styles.card, "js-articleItem"]} data-category={category}>
+  <a href={id} class={styles.card__link}>
+    <div class={styles.card__thumbnailWrap}>
+      <img
+        class={styles.card__thumbnail}
+        src={thumbnail}
+        loading="lazy"
+        decoding="async"
+        width={337}
+        height={225}
+        alt=""
+      />
+    </div>
+    <div class={styles.card__body}>
+      <h3 class={styles.card__title} set:html={title} />
+      <time class={styles.card__area} datetime={date} aria-label={foramatedDate}>
+        {date}
+      </time>
+    </div>
+  </a>
+</article>

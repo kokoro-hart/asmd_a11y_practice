@@ -1,0 +1,9 @@
+lang: "ja"
+siteName: "A11y Practice"
+
+meta:
+  title: "A11y Practice"
+  description: "not description"
+  "og:title": "not title"
+  "og:description": "not description"
+  "og:image": "/ogp.png"

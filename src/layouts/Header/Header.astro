@@ -1,0 +1,53 @@
+---
+import styles from "./Header.module.scss"
+
+import { getPath, testPath } from "@/utils"
+import Container from "../Container/Container.astro"
+
+const nav = [
+  {
+    name: "Home",
+    path: getPath.top,
+  },
+  {
+    name: "Blog",
+    path: getPath.blog,
+  },
+  {
+    name: "About",
+    path: getPath.about,
+  },
+]
+
+const { pathname } = Astro.url
+const isTopPage = testPath.isTop(pathname)
+const LogoTag = isTopPage ? "h1" : "div"
+
+const getIsCurrent = (path: string) => path === pathname || path === pathname.replace(/\/$/, "")
+---
+
+<header class={styles.header}>
+  <Container className={"flex justify-between align-middle"}>
+    <LogoTag class={styles.logo}>
+      <a href={getPath.top}>A11y Practice</a>
+    </LogoTag>
+    <nav class={styles.nav} aria-label={"サイトメニュー"}>
+      <ul class={styles.list}>
+        {
+          nav.map(({ name, path }) => (
+            <li class={styles.item}>
+              <a
+                href={path}
+                class={styles.link}
+                data-current={`${getIsCurrent(path)}`}
+                aria-current={getIsCurrent(path) ? "page" : "false"}
+              >
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </Container>
+</header>

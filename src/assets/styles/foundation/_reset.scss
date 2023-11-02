@@ -1,0 +1,194 @@
+@charset "utf-8";
+@use "../global" as *;
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  min-height: 100vh;
+  line-break: strict;
+}
+
+:root,
+body {
+  height: 100%;
+}
+
+body {
+  color: $color_black;
+  background-color: #f3f4f6;
+  overflow-wrap: break-word;
+
+  @include fz(16);
+  @include font_primary;
+
+  &._isScrollLock {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+[hidden] {
+  display: block !important;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  vertical-align: top;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: none;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 3px rgba(#0f83fd, 0.6);
+}
+
+/* form */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+input[type="email"],
+textarea {
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0 0 0 / 0%);
+}
+
+textarea {
+  display: block;
+}
+
+fieldset {
+  margin: 0;
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}

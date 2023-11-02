@@ -1,0 +1,75 @@
+---
+import "ress"
+import "@/assets/styles/style.scss"
+import config from "@/data/meta.yml"
+
+export type Meta = {
+  title: string
+  description: string
+  "og:title": string
+  "og:description": string
+  "og:image": string
+}
+
+export type DocumentProps = {
+  meta?: Partial<Meta>
+}
+
+const props = Astro.props
+
+const meta: Readonly<Meta> = {
+  ...config.meta,
+  ...props.meta,
+}
+
+const formats = {
+  title: meta.title === config.siteName ? config.siteName : [meta.title, config.siteName].filter(Boolean).join(" | "),
+  "og:image": meta["og:image"] ?? config.meta["og:image"],
+}
+const origin = import.meta.env.PUBLIC_ORIGIN || Astro.url.origin
+const url = `${origin}${Astro.url.pathname}`
+---
+
+<html lang={config.lang}>
+  <head>
+    <meta charset={new TextDecoder().encoding} />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{formats.title}</title>
+    <link rel="dns-prefetch" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin />
+
+    <meta name="og:url" property="og:url" content={url} />
+    <meta name="og:title" property="og:title" content={formats.title} />
+    <meta name="og:description" property="og:description" content={meta.description} />
+    <meta property="og:type" content="website" />
+    <meta name="og:site_name" property="og:site_name" content={formats.title} />
+    {meta["og:image"] && <meta name="og:image" property="og:image" content={origin + meta["og:image"]} />}
+    <link rel="canonical" href={url} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dummy" />
+    <meta name="twitter:description" content={meta.description} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script>
+      import "@/assets/scripts/app"
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

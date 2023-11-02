@@ -1,0 +1,17 @@
+---
+import styles from "./Heading.module.scss"
+
+import type { PropsWithClassName } from "@/types"
+import type { HTMLTagString } from "@/types/astro"
+
+export type Props = PropsWithClassName & {
+  tag?: HTMLTagString
+  size?: "xs" | "sm" | "md" | "lg"
+}
+
+const { tag: Tag = "h2", size = "md", className } = Astro.props
+---
+
+<Tag class:list={[styles.heading, className]} data-size={size}>
+  <slot />
+</Tag>

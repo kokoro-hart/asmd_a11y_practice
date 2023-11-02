@@ -1,0 +1,20 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.container {
+  &[data-size="sm"] {
+    @include content_width(sm);
+  }
+
+  &[data-size="md"] {
+    @include content_width(md);
+  }
+
+  &[data-size="lg"] {
+    @include content_width(lg);
+  }
+
+  &[data-size="xl"] {
+    @include content_width(xl);
+  }
+}

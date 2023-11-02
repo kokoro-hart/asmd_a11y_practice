@@ -1,0 +1,67 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.heading {
+  @include font_secondary;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &[data-size="xs"] {
+    @include fz(24);
+    @include lh(29.26, 24);
+
+    @include mq(md) {
+      @include fz(20);
+      @include lh(20, 20);
+
+      letter-spacing: 0.05em;
+    }
+
+    @include mq(lg) {
+      @include fz(32);
+      @include lh(39, 32);
+    }
+  }
+
+  &[data-size="sm"] {
+    @include fz(26);
+    @include lh(31, 26);
+
+    @include mq(md) {
+      @include clamp_mix("font-size", 768, 1536, 20, 32);
+      @include lh(49, 40);
+
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &[data-size="md"] {
+    @include fz(26);
+    @include lh(31, 26);
+
+    letter-spacing: 1.3px;
+
+    @include mq(md) {
+      @include clamp_mix("font-size", 768, 1536, 20, 32);
+      @include lh(49, 40);
+
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &[data-size="lg"] {
+    @include fz(26);
+    @include lh(31, 26);
+
+    letter-spacing: 0.05em;
+
+    @include mq(md) {
+      @include fz(40);
+      @include lh(49, 40);
+
+      letter-spacing: 0.05em;
+    }
+  }
+}

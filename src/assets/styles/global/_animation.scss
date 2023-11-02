@@ -1,0 +1,44 @@
+@charset "utf-8";
+@use "breakpoint";
+@use "mixin";
+@use "variables";
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin hover_opacity($opacity: 0.6, $duration: 0.4s) {
+  @include breakpoint.mq(md) {
+    transition: opacity $duration variables.$ease_out_quint;
+  }
+
+  @include hover {
+    opacity: $opacity;
+  }
+}
+
+@mixin hover_zoom($scale: 1.05, $duration: 0.6s) {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transition: transform $duration variables.$ease_out_quint;
+    transform: translate(-50%, -50%);
+  }
+
+  @include hover {
+    img {
+      transform: translate(-50%, -50%) scale($scale);
+    }
+  }
+}

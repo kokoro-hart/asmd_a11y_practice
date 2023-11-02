@@ -1,0 +1,27 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.footer {
+  padding: 40px 24px;
+  background: linear-gradient(rgba(229, 233, 240, 0.5), rgb(255, 255, 255));
+  color: $color_black;
+  text-align: center;
+}
+
+.copyright {
+  @include fz(16);
+}
+
+.social_Links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: $color_black;
+
+  @include hover_opacity;
+}

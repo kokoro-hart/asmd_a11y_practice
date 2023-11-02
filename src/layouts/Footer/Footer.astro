@@ -1,0 +1,21 @@
+---
+import styles from "./Footer.module.scss"
+import IconTwitter from "@/assets/images/icons/IconTwitter.astro"
+import IconGIthub from "@/assets/images/icons/IconGIthub.astro"
+
+const today = new Date()
+---
+
+<footer class={styles.footer}>
+  <p class={styles.copyright}><small>&copy; {today.getFullYear()} Your name here. All rights reserved.</small></p>
+  <div class={styles.social_Links}>
+    <a class={styles.link} href="https://twitter.com/astrodotbuild" target="_blank">
+      <span class="sr-only">AstroのTwitterへ</span>
+      <IconTwitter />
+    </a>
+    <a class={styles.link} href="https://github.com/withastro/astro" target="_blank">
+      <span class="sr-only">AstroのGithubリポジトリへ</span>
+      <IconGIthub />
+    </a>
+  </div>
+</footer>

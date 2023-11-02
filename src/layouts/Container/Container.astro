@@ -1,0 +1,15 @@
+---
+import styles from "./Container.module.scss"
+
+import type { PropsWithClassName } from "@/types"
+import type { HTMLTagString } from "@/types/astro"
+
+export type Props = PropsWithClassName & {
+  tag?: HTMLTagString
+  size?: "sm" | "md" | "lg" | "xl"
+}
+
+const { tag: Tag = "div", size = "lg", className } = Astro.props
+---
+
+<Tag class:list={[styles.container, className]} data-size={size}><slot /></Tag>

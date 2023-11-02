@@ -1,0 +1,22 @@
+---
+import CardsWithPaginationFilter from "@/components/CardsWithPaginationFilter/CardsWithPaginationFilter.astro"
+import Heading from "@/components/Heading/Heading.astro"
+import { usePosts } from "@/hooks"
+import AppLayout from "@/layouts/AppLayout/AppLayout.astro"
+import Container from "@/layouts/Container/Container.astro"
+
+const { posts, categories } = await usePosts()
+
+const meta = {
+  description: "description",
+}
+---
+
+<AppLayout meta={meta}>
+  <Container>
+    <section>
+      <Heading className={"justify-center"}>記事一覧</Heading>
+      <CardsWithPaginationFilter cards={posts} categories={categories} />
+    </section>
+  </Container>
+</AppLayout>

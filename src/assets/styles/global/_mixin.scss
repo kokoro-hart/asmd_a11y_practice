@@ -1,0 +1,151 @@
+@charset "utf-8";
+@use "sass:math";
+@use "breakpoint";
+@use "variables";
+
+@mixin content_width($width: md) {
+  width: 100%;
+  padding-right: variables.$content_padding_sm;
+  padding-left: variables.$content_padding_sm;
+  margin-right: auto;
+  margin-left: auto;
+
+  @if $width == sm {
+    @include breakpoint.mq(md) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+  } @else if $width == md {
+    @include breakpoint.mq(md) {
+      padding-right: variables.$content_padding_lg;
+      padding-left: variables.$content_padding_lg;
+    }
+  } @else if $width == lg {
+    @include breakpoint.mq(md) {
+      padding-right: variables.$content_padding_lg;
+      padding-left: variables.$content_padding_lg;
+    }
+  } @else if $width == xl {
+    @include breakpoint.mq(md) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+  }
+
+  @if $width == sm {
+    max-width: calc(#{variables.$content_width_sm} + #{variables.$content_padding_md} * 2);
+  } @else if $width == md {
+    max-width: calc(#{variables.$content_width_md} + #{variables.$content_padding_lg} * 2);
+  } @else if $width == lg {
+    max-width: calc(#{variables.$content_width_lg} + #{variables.$content_padding_lg} * 2);
+  } @else if $width == xl {
+    max-width: calc(#{variables.$content_width_xl} + #{variables.$content_padding_md} * 2);
+  }
+}
+
+@mixin original_content_width($width: 1000px, $paddingMd: 60px, $paddingUnderMd: 20px) {
+  width: 100%;
+  padding-right: $paddingUnderMd;
+  padding-left: $paddingUnderMd;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint.mq(md) {
+    max-width: calc($width + $paddingMd * 2);
+    padding-right: $paddingMd;
+    padding-left: $paddingMd;
+  }
+}
+
+@mixin clamp_mix($property, $minBp, $maxBp, $minVal, $maxVal) {
+  $a: calc(100 * ($maxVal - $minVal) / ($maxBp - $minBp));
+  $b: calc($minVal - ($minBp / 100) * $a);
+  $vw: calc(#{$a}vw + #{$b}px);
+
+  #{$property}: clamp(#{$minVal}px, #{$vw}, #{$maxVal}px);
+}
+
+@function clamp_value($minBp, $maxBp, $minVal, $maxVal) {
+  $a: calc(100 * ($maxVal - $minVal) / ($maxBp - $minBp));
+  $b: calc($minVal - ($minBp / 100) * $a);
+  $vw: calc(#{$a}vw + #{$b}px);
+
+  @return clamp(#{$minVal}px, #{$vw}, #{$maxVal}px);
+}
+
+@mixin object_fit($fit: cover, $position: null) {
+  object-fit: $fit;
+
+  @if $position {
+    object-position: $position;
+    font-family: "object-fit: #{$fit}; object-position: #{$position}";
+  } @else {
+    font-family: "object-fit: #{$fit};";
+  }
+}
+
+@mixin visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  border: 0;
+}
+
+@mixin line_clamp($count: 3) {
+  @if type-of($count) != "number" {
+    @error 'line-clampの引数は必ず数値で指定してください';
+  }
+
+  @if $count == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin only_firefox {
+  @supports (-moz-appearance: meterbar) {
+    @content;
+  }
+}
+
+@mixin only_safari {
+  @supports (paint-order: fill) and (-webkit-marquee-speed: 0) {
+    @content;
+  }
+}
+
+@mixin only_iOS {
+  @supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and (not (-moz-appearance: none)) {
+    @content;
+  }
+}
+
+@mixin only_edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}

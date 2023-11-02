@@ -1,0 +1,71 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__inner {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.pagination__next,
+.pagination__prev {
+  padding: 10px;
+  visibility: visible;
+
+  &[data-disable="true"] {
+    padding: 10px;
+    visibility: hidden;
+  }
+
+  svg {
+    path {
+      transition: fill 0.6s $ease_out_quint;
+    }
+  }
+  @include hover {
+    svg {
+      path {
+        fill: var(--color-primary);
+      }
+    }
+  }
+}
+
+.pagination__counter {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+
+  :global(.pageNumber),
+  :global(.pageNumberEllipsis) {
+    display: inline-block;
+    padding: 10px;
+    color: $color_gray;
+    letter-spacing: 1px;
+    @include fz(20);
+    @include lh(20, 20);
+    @include font_secondary;
+
+    touch-action: manipulation;
+  }
+
+  :global(.pageNumber) {
+    &[data-current="true"] {
+      color: var(--color-primary);
+      transition: color 0.6s $ease_out_quint;
+    }
+
+    @include hover {
+      color: var(--color-primary);
+    }
+  }
+
+  :global(.pageNumberEllipsis) {
+    transform: translateY(-10%);
+  }
+}

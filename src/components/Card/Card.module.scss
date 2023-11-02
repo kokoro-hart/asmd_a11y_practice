@@ -1,0 +1,153 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.card {
+  width: 100%;
+  aspect-ratio: 283 / 250;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
+  transition: opacity 0.8s $ease_out_quint, transform 0.6s $ease_out_quint;
+  transition-delay: 0.15s;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &[aria-hidden="true"] {
+    opacity: 0;
+    transform: translateY(20px);
+    @include visually_hidden;
+  }
+
+  @include hover {
+    .card__thumbnail {
+      transform: translate(-50%, -50%) scale(1.03);
+    }
+
+    .card__icon {
+      transform: translateX(3px) translateY(-50%);
+    }
+  }
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.card__thumbnailWrap {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 283 / 142;
+  overflow: hidden;
+  background-color: #e8e8eb;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #e8e8eb;
+  }
+}
+
+.card__thumbnail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s $ease_out_quint;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center center;
+}
+
+.card__body {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  background-color: $color-white;
+
+  @include mq(md, max) {
+    height: 84px;
+    padding: 11px 40px 34px 12px;
+  }
+
+  @include mq(md) {
+    padding: 7px 26px 24px 6px;
+  }
+
+  @include mq(lg) {
+    padding: 7px 40px 31px 12px;
+  }
+}
+
+.card__title {
+  @include lh(24, 16);
+  @include font_secondary;
+  @include line_clamp(3);
+  @include clamp_mix("font-size", 392, 767, 16, 24);
+
+  @include mq(md, max) {
+    letter-spacing: 0.8px;
+  }
+
+  @include mq(md) {
+    @include clamp_mix("font-size", 768, 1024, 13, 16);
+  }
+
+  @include mq(lg) {
+    letter-spacing: 0.8px;
+  }
+}
+
+.card__area {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  @include fz(15);
+  @include lh(18.29, 15);
+  @include font_secondary;
+  @include line_clamp(1);
+
+  letter-spacing: 0.75px;
+  word-break: break-word;
+
+  @include mq(md) {
+    @include clamp_mix("font-size", 768, 1024, 11, 15);
+
+    bottom: 6px;
+    left: 6px;
+    width: calc(100% - 12px);
+  }
+
+  @include mq(lg) {
+    bottom: 10px;
+    left: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
+.card__icon {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  transition: transform 0.3s $ease_out_quint;
+  transform: translateY(-50%);
+
+  @include mq(lg, max) {
+    width: 9.466px;
+    height: 15.94px;
+  }
+}

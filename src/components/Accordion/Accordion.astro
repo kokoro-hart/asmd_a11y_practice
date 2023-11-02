@@ -1,0 +1,124 @@
+<h1 class="title">アコーディオン実装例</h1>
+<div class="accordion">
+  <h2 class="accordion-header">
+    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accordion-panel-1">
+      見出し01<span class="accordion-icon"></span>
+    </button>
+  </h2>
+  <div id="accordion-panel-1" class="accordion-panel" hidden="until-found">
+    <p class="accordion-panel__text">検索するとヒットします。</p>
+  </div>
+  <h2 class="accordion-header">
+    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accordion-panel-2">
+      見出し02<span class="accordion-icon"></span>
+    </button>
+  </h2>
+  <div id="accordion-panel-2" class="accordion-panel" hidden="until-found">
+    <p class="accordion-panel__text">検索するとヒットします。</p>
+  </div>
+
+  <h2 class="accordion-header">
+    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="accordion-panel-3">
+      見出し03<span class="accordion-icon"></span>
+    </button>
+  </h2>
+  <div id="accordion-panel-3" class="accordion-panel" hidden="until-found">
+    <p class="accordion-panel__text">検索するとヒットします。</p>
+  </div>
+</div>
+
+<style>
+  button {
+    border-style: none;
+    color: inherit;
+    font-family: sans-serif;
+  }
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .accordion {
+    width: 400px;
+    max-width: 90%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #a3a3a3;
+  }
+  .accordion > * + * {
+    border-top: 1px solid #a3a3a3;
+  }
+  .accordion-header {
+    position: relative;
+  }
+  .accordion-trigger {
+    display: block;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .accordion-trigger[aria-expanded="true"] {
+    background-color: #dbeafe;
+  }
+  @media (hover: hover) {
+    .accordion-trigger:hover {
+      background-color: #dbeafe;
+    }
+  }
+  .accordion-icon {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    border: solid #000;
+    border-width: 2px 2px 0 0;
+    transform: rotate(135deg);
+  }
+  .accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(-45deg);
+  }
+  .accordion-panel__text {
+    padding: 1rem 1.5rem;
+  }
+</style>
+
+<script>
+  const triggers = document.querySelectorAll(".accordion-trigger")
+  triggers.forEach((trigger) => {
+    const controls = trigger.getAttribute("aria-controls")
+    if (!controls) return
+    const panel = document.getElementById(controls)
+
+    trigger.addEventListener("click", (e) => {
+      const target = e.currentTarget as HTMLElement
+      if (!target || !panel) return
+      const isOpen = target.getAttribute("aria-expanded") === "true"
+
+      if (isOpen) {
+        target.setAttribute("aria-expanded", "false")
+        panel.setAttribute("hidden", "until-found")
+      } else {
+        target.setAttribute("aria-expanded", "true")
+        panel.removeAttribute("hidden")
+      }
+    })
+
+    if (!panel) return
+
+    panel.addEventListener("beforematch", (e) => {
+      const target = e.currentTarget as HTMLElement
+      if (!target) return
+
+      const id = target.id
+      const trigger = document.querySelector(`button[aria-controls="${id}"]`)
+      trigger?.setAttribute("aria-expanded", "true")
+    })
+  })
+</script>

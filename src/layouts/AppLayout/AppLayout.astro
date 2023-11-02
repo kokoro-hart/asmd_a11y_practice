@@ -1,0 +1,20 @@
+---
+import Document, { DocumentProps } from "../Document.astro"
+import Header from "../Header/Header.astro"
+import Footer from "../Footer/Footer.astro"
+
+import styles from "./AppLayout.module.scss"
+
+const { ...props } = Astro.props
+---
+
+<Document {...props}>
+  <a href="#start-of-content" class={styles.linkSkip}>メインコンテンツにスキップ</a>
+  <div id="app" class={styles.appLayout}>
+    <Header />
+    <main id="start-of-content" class={styles.appLayout__main}>
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</Document>

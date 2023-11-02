@@ -1,0 +1,40 @@
+@charset "utf-8";
+@use "@/assets/styles/global" as *;
+
+.linkSkip {
+  position: fixed;
+  top: 3px;
+  left: 3px;
+  padding: 8px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  background-color: $color_white;
+  border-radius: 4px;
+  @include fz(14);
+  @include font_secondary;
+
+  @include mq(md) {
+    @include fz(16);
+    padding: 12px;
+  }
+  opacity: 0;
+
+  &:focus {
+    opacity: 1;
+    z-index: calc(var(--zindex-header) + 1);
+  }
+}
+
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.appLayout__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
